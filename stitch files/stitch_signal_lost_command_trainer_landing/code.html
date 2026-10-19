@@ -1,0 +1,731 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed-dim": "#4cd7f6",
+          "on-surface-variant": "#3d4947",
+          "outline": "#6d7a77",
+          "surface-dim": "#d2d9f4",
+          "surface-bright": "#faf8ff",
+          "tertiary": "#8d4b00",
+          "surface-variant": "#dae2fd",
+          "surface-container-high": "#e2e7ff",
+          "on-tertiary-fixed-variant": "#6e3900",
+          "tertiary-fixed": "#ffdcc3",
+          "surface-container-highest": "#dae2fd",
+          "tertiary-container": "#b15f00",
+          "error-container": "#ffdad6",
+          "surface": "#faf8ff",
+          "primary-fixed-dim": "#6bd8cb",
+          "inverse-on-surface": "#eef0ff",
+          "inverse-surface": "#283044",
+          "on-secondary-fixed": "#001f26",
+          "secondary-container": "#57dffe",
+          "on-secondary-container": "#006172",
+          "on-primary-fixed": "#00201d",
+          "on-tertiary-fixed": "#2f1500",
+          "inverse-primary": "#6bd8cb",
+          "secondary": "#00687a",
+          "on-primary-container": "#f4fffc",
+          "on-secondary": "#ffffff",
+          "background": "#faf8ff",
+          "surface-container-lowest": "#ffffff",
+          "on-primary-fixed-variant": "#005049",
+          "on-error-container": "#93000a",
+          "on-secondary-fixed-variant": "#004e5c",
+          "primary": "#00685f",
+          "on-primary": "#ffffff",
+          "outline-variant": "#bcc9c6",
+          "surface-container-low": "#f2f3ff",
+          "on-tertiary-container": "#fffbff",
+          "on-error": "#ffffff",
+          "surface-tint": "#006a61",
+          "primary-container": "#008378",
+          "surface-container": "#eaedff",
+          "tertiary-fixed-dim": "#ffb77d",
+          "on-background": "#131b2e",
+          "on-surface": "#131b2e",
+          "error": "#ba1a1a",
+          "on-tertiary": "#ffffff",
+          "primary-fixed": "#89f5e7",
+          "secondary-fixed": "#acedff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-lg": "1.5rem",
+          "space-md": "1rem",
+          "gutter": "1rem",
+          "gutter-sm": "0.5rem",
+          "margin-desktop": "2rem",
+          "margin": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Geist"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "body-md": [
+            "Geist"
+          ],
+          "headline-xl": [
+            "Space Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "title-sm": [
+            "Space Grotesk"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-xl-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "body-sm": [
+            "Geist"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "40px",
+            {
+              "lineHeight": "48px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "22px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "title-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-lg-mobile": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "30px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-gutter-lg flex items-center justify-between"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="overview" href="#"><div class="w-2 h-2 rounded bg-primary"></div><span class="font-headline-md text-headline-md tracking-wider text-on-surface uppercase">SIGNAL<span class="text-primary">LOST</span></span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low"><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SYS READY // LOW-LATENCY SANDBOX</span></div></div><nav class="hidden lg:flex items-center gap-space-sm" data-active-classes="bg-surface-container text-on-surface font-semibold rounded"><a aria-current="page" class="px-space-md py-space-sm uppercase tracking-wider transition-colors bg-surface-container text-on-surface font-semibold rounded" data-path="overview" href="#">Overview</a><a class="px-space-md py-space-sm text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low hover:text-on-surface rounded transition-colors" data-path="scenarios" href="#">Scenarios</a><a class="px-space-md py-space-sm text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low hover:text-on-surface rounded transition-colors" data-path="operational-simulator" href="#">Operational Simulator</a><a class="px-space-md py-space-sm text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low hover:text-on-surface rounded transition-colors" data-path="tactical-doctrine" href="#">Tactical Doctrine</a><a class="px-space-md py-space-sm text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low hover:text-on-surface rounded transition-colors" data-path="aar-engine" href="#">AAR Engine</a></nav><div class="flex items-center gap-space-md"><a class="px-space-lg py-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider rounded transition-colors" data-path="operational-simulator" href="#">Launch Simulator</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Technical Banner: System Status Stream -->
+<section class="w-full bg-surface-container-low px-gutter-lg py-space-sm shadow-sm"><div class="w-full flex flex-wrap items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded shadow-sm"><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">SYSTEM STATUS: READY FOR SIMULATION</span></div><span class="font-label-sm text-label-sm text-on-surface-variant hidden md:inline">Contested Communications &amp; DDIL Training Framework</span></div><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>Air-Gapped &amp; Browser-Native</span><span class="hidden sm:inline text-outline-variant">•</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">v2.4 Active</span></div></div></section>
+<!-- Hero Section -->
+<section class="w-full px-gutter-lg pt-space-xl pb-space-xl relative overflow-hidden bg-surface">
+<!-- Background Technical Watermark Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="48" id="tactical-grid-pattern" patternUnits="userSpaceOnUse" width="48">
+<path class="text-outline-variant" d="M 48 0 L 0 0 0 48" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+<circle class="text-outline" cx="24" cy="24" fill="currentColor" r="0.75"></circle>
+</pattern>
+</defs>
+<rect fill="url(#tactical-grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Technical Pill Overline -->
+<div class="flex flex-wrap items-center gap-space-sm"><div class="px-space-sm py-space-xs rounded bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase flex items-center gap-space-xs shadow-sm"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span>TACTICAL DECISION SIMULATOR // DDIL TRAINING PLATFORM</div><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">MULTI-DOMAIN COMMUNICATIONS DEGRADATION</span></div>
+<!-- Main Headline & Narrative Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight uppercase">
+            Command <span class="bg-primary text-on-primary px-space-sm rounded">When the Network Fails.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Train strategic officers and tactical commanders to make critical mission decisions under Degraded, Disconnected, Intermittent, and Limited-bandwidth (DDIL) conditions. Simulate realistic electronic warfare jamming, synthetic decoy proliferation, and severe latency-induced fog of war with mathematical ground-truth precision.
+          </p>
+<!-- Call to Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="px-space-xl py-space-md bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider rounded transition-all shadow-md flex items-center gap-space-sm group" data-path="operational-simulator" href="#">
+<span class="">Initialize Simulation</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+<a class="px-space-lg py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider rounded transition-colors shadow-sm flex items-center gap-space-sm" href="#featured-scenarios">
+<span class="">Explore Command Scenarios</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</a>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm px-space-md py-space-sm bg-surface-container-low rounded"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span class="">100% PRIVATE • RUNS LOCALLY IN-BROWSER</span></div>
+</div>
+</div>
+<!-- Metric Sidebar Tile: Baseline Benchmark -->
+<div class="lg:col-span-4 bg-surface-container-lowest p-space-lg rounded shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">LIVE COGNITIVE LOAD DELTA</span>
+<span class="px-space-xs py-0.5 bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm rounded uppercase">ACTIVE BENCHMARK</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="p-space-sm bg-surface-container-low rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">MEAN DECISION TIME</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">14.8<span class="text-label-md text-primary ml-1">SEC</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">+310% under RF spoofing</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">DECOY RECOGNITION</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">41.2<span class="text-label-md text-on-surface ml-1">%</span></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Unassisted command pass</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">SIMULATION PACKET ENTROPY</span>
+<span class="text-on-surface font-semibold">HIGH CONVERGENCE</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Sandbox Status Bar Ribbon -->
+<div class="w-full bg-surface-container-lowest rounded p-space-md shadow-sm flex flex-wrap items-center justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-lg"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">terminal</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">100% In-Browser Execution</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">signal_disconnected</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Realistic Signal Degradation</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[18px]">psychology</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Cognitive Bias Assessment</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">replay</span><span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">Instant After-Action Review</span></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-md text-label-md text-on-surface font-semibold">ZERO SETUP REQUIRED</span></div></div>
+</div>
+</section>
+<!-- Interactive Centerpiece: Synthetic Command & Telemetry Console (Light Mode) -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<!-- Section Header with Operational Metadata -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">radar</span>
+            SYNTHETIC COMMAND ENVIRONMENT // OPERATIONAL INTERCEPT CONSOLE
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Tactical Situation Sandbox</h2>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase">CONTESTED SPECTRUM SIMULATION // ACTIVE CORRELATION</span>
+</div>
+</div>
+<!-- Main Tri-Panel Console Canvas -->
+<div class="w-full bg-surface-container-lowest rounded shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+<!-- Left Panel: Tactical Grid / Sector Vector Map (5 cols) -->
+<div class="lg:col-span-5 p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase">SECTOR 04 // VECTOR MAP</span>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm uppercase">RF CONTESTED</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">34.04° N // 71.52° E</span>
+</div>
+<!-- Synthetic Vector Radar Canvas Area -->
+<div class="relative w-full h-80 bg-surface-container-low rounded overflow-hidden flex items-center justify-center shadow-inner">
+<!-- Concentric Range Rings & Crosshairs -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<circle class="text-outline-variant" cx="50%" cy="50%" fill="none" r="130" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></circle>
+<circle class="text-outline-variant" cx="50%" cy="50%" fill="none" r="90" stroke="currentColor" stroke-width="1"></circle>
+<circle class="text-outline-variant" cx="50%" cy="50%" fill="none" r="45" stroke="currentColor" stroke-width="1"></circle>
+<line class="text-outline-variant" stroke="currentColor" stroke-width="1" x1="50%" x2="50%" y1="0" y2="100%"></line>
+<line class="text-outline-variant" stroke="currentColor" stroke-width="1" x1="0" x2="100%" y1="50%" y2="50%"></line>
+<!-- Active Jamming Cone (SVG Polygon) -->
+<polygon class="text-secondary-fixed opacity-30" fill="currentColor" points="50,40 180,160 80,240"></polygon>
+<text class="fill-secondary font-label-sm text-[9px] uppercase tracking-wider font-bold" x="60" y="70">RF JAMMING ZONE (BAND-X)</text>
+<!-- Planned Autonomous Recon Trajectory -->
+<path class="text-primary" d="M 120 220 Q 200 180 280 200 T 380 120" fill="none" stroke="currentColor" stroke-dasharray="6 3" stroke-width="2"></path>
+</svg>
+<!-- Vector Track Entity Pins -->
+<div class="absolute top-1/4 left-1/3 flex flex-col items-center">
+<div class="w-3 h-3 border-2 border-primary bg-surface-container-lowest rotate-45 flex items-center justify-center">
+<div class="w-1 h-1 bg-primary"></div>
+</div>
+<span class="mt-1 font-label-sm text-label-sm bg-surface-container-lowest px-1 rounded shadow-sm text-on-surface font-semibold">UAV-09 [STALE +42s]</span>
+</div>
+<!-- Suspected Decoy Target Cluster -->
+<div class="absolute bottom-1/3 right-1/4 flex flex-col items-center">
+<div class="w-3 h-3 rounded-full bg-tertiary flex items-center justify-center animate-ping"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-tertiary absolute"></div>
+<span class="mt-1 font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed px-1 rounded shadow-sm font-bold">GHOST-01 // SPOOF PROB: 88%</span>
+</div>
+<!-- Sub-Surface Anchor Node -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-4 h-4 rounded bg-primary text-on-primary flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[12px]">hub</span>
+</div>
+<span class="mt-1 font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed px-1 rounded font-bold">C2 NODE DELTA</span>
+</div>
+<!-- Compass / Azimuth Ring Indicator -->
+<div class="absolute bottom-2 left-2 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest/90 px-space-xs py-0.5 rounded shadow-sm">
+              HDG: 284° M // RNG: 18.4 KM
+            </div>
+<div class="absolute top-2 right-2 flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest/90 px-space-xs py-0.5 rounded shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              LOST COMM LINK // SATELLITE LOS
+            </div>
+</div>
+<!-- Quick Map Actions -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs">
+<button class="px-space-sm py-space-xs bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider text-center transition-colors">
+              FILTER GHOSTS
+            </button>
+<button class="px-space-sm py-space-xs bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider text-center transition-colors">
+              P2P MESH MAP
+            </button>
+<button class="px-space-sm py-space-xs bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm uppercase tracking-wider text-center transition-colors">
+              RF CONTOUR
+            </button>
+</div>
+</div>
+<!-- Middle Panel: Sensor Correlation Matrix (4 cols) -->
+<div class="lg:col-span-4 p-space-md flex flex-col justify-between gap-space-md bg-surface-container-low shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase">CORRELATION MATRIX</span>
+<span class="px-space-xs py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded uppercase font-semibold">DISCREPANCY ALERT</span>
+</div>
+<!-- Feed A: Optical UAV Telemetry -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">FEED A // OPTICAL RECON (UAV-09)</span>
+<span class="font-label-sm text-label-sm text-error font-bold">AGE: 42.4s (STALE)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">
+                Reports column of 4 heavy transport assets maneuvering along Ridge Route 07. Visual silhouette match: 91%.
+              </div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
+<span class="">PACKET INTEGRITY: 28%</span>
+<span class="text-tertiary font-semibold">SUSPECTED OPTICAL REPEATER</span>
+</div>
+</div>
+<!-- Feed B: Seismic / Ground Acoustic Telemetry -->
+<div class="p-space-sm bg-surface-container-lowest rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">FEED B // PASSIVE SEISMIC ARRAY (NODE-S3)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">AGE: 0.8s (REALTIME)</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface">
+                Zero ground displacement signatures on Route 07. Detects isolated high-power acoustic speaker emission signatures.
+              </div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-space-xs">
+<span class="">PACKET INTEGRITY: 99%</span>
+<span class="text-primary font-semibold">AUTHENTIC SENSOR FUSION</span>
+</div>
+</div>
+<!-- Decision Vector Prompt Container -->
+<div class="p-space-sm bg-primary-fixed-dim/20 rounded flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">COMMAND OVERRIDE REQUIRED</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Air Support Request pending target authorization on Route 07. Risk of engaging spoofed drone audio decoys.
+              </p>
+</div>
+</div>
+<!-- Tactical Micro-Actions for Commander Decision -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors shadow-sm text-center">
+              REJECT UAV TELEMETRY (CLASSIFY SPOOF)
+            </button>
+<button class="w-full py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded transition-colors text-center">
+              ORDER PHYSICAL RECONVERGENCE (+90s)
+            </button>
+</div>
+</div>
+<!-- Right Panel: DDIL Degradation Telemetry & Audit Log (3 cols) -->
+<div class="lg:col-span-3 p-space-md flex flex-col justify-between gap-space-md bg-surface-container-lowest">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase">DEGRADATION MONITOR</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">DDIL PROFILE: COND-3</span>
+</div>
+<!-- Gauge Metric 1: Packet Drop Rate -->
+<div class="space-y-1">
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-on-surface-variant">PACKET DROP RATE</span>
+<span class="font-headline-md text-headline-md text-error font-bold">74.2%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error" style="width: 74.2%;"></div>
+</div>
+</div>
+<!-- Gauge Metric 2: Delay Skew Graph -->
+<div class="space-y-1">
+<div class="flex justify-between items-baseline">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DELAY SKEW LATENCY</span>
+<span class="font-headline-md text-headline-md text-tertiary font-bold">+940<span class="text-label-sm">ms</span></span>
+</div>
+<!-- Inline SVG Sparkline -->
+<svg class="w-full h-10 bg-surface-container-low rounded p-1" viewBox="0 0 200 40">
+<polyline class="text-tertiary" fill="none" points="0,32 25,28 50,34 75,15 100,22 125,8 150,18 175,5 200,12" stroke="currentColor" stroke-width="2"></polyline>
+</svg>
+</div>
+<!-- Live Audit Log Stream -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">LOCAL EVENT BUS</span>
+<div class="p-space-xs bg-surface-container-low rounded font-label-sm text-label-sm flex flex-col gap-1 max-h-36 overflow-y-auto">
+<div class="text-on-surface-variant"><span class="text-outline">14:02:11</span> EW Burst detected on UHF-3</div>
+<div class="text-error"><span class="text-outline">14:02:14</span> Uplink Lost: SAT-02 out of azimuth</div>
+<div class="text-primary font-semibold"><span class="text-outline">14:02:17</span> P2P Mesh re-routed via Node-08</div>
+<div class="text-on-surface-variant"><span class="text-outline">14:02:18</span> Seed 0x8F4A committed locally</div>
+</div>
+</div>
+</div>
+<!-- Bottom Console Control Bar -->
+<div class="pt-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span>LOCAL SIMULATOR ACTIVE</span><button class="px-space-md py-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded uppercase tracking-wider font-semibold shadow-sm">PAUSE TICK</button></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Operational Scenarios -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface" id="featured-scenarios">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">STANDARDIZED EVALUATION SUITE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Operational Scenarios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Rigorous mission environments engineered to challenge tactical intuition under strict comms degradation, multi-spectral deception, and split-second decisions.
+          </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">PROTOCOL STANDARD:</span>
+<span class="px-space-xs py-0.5 bg-surface-container-high rounded text-on-surface font-label-sm text-label-sm font-bold">MIL-STD-DDIL-2025</span>
+</div>
+</div>
+<!-- Scenarios 3-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Scenario 1: Pulse Blackout -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">EXERCISE 01 // PULSE BLACKOUT</span>
+<span class="px-space-xs py-0.5 bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant">NAVAL / COASTAL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Coastal Defense Uplink Outage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Manage joint surface fleet defensive fire-control solutions during periodic satellite uplink loss combined with shore-based deceptive RF repeaters projecting phantom missile tracks.
+            </p>
+<!-- Parameters Table -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded space-y-1 font-label-sm text-label-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">SIGNAL AVAILABILITY</span>
+<span class="text-on-surface font-semibold">35% PERIODIC</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">DECOY DENSITY</span>
+<span class="text-on-surface font-semibold">1:4 PHANTOM RATIO</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TRANSMISSION DELAY</span>
+<span class="text-on-surface font-semibold">+45s INTERMITTENT</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DURATION: 45 MIN</span>
+<a class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded font-semibold transition-colors" data-path="operational-simulator" href="#">
+              LOAD PROFILE
+            </a>
+</div>
+</div>
+<!-- Scenario 2: Ghost Convoy (Featured Card) -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-md ring-2 ring-primary/40 flex flex-col justify-between gap-space-md relative">
+<div class="absolute -top-3 right-space-md px-space-sm py-0.5 bg-primary text-on-primary font-label-sm text-label-sm rounded uppercase font-bold shadow-sm">
+            RECOMMENDED FOR CERTIFICATION
+          </div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">EXERCISE 02 // GHOST CONVOY</span>
+<span class="px-space-xs py-0.5 bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant">URBAN TACTICAL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Urban Corridor Acoustic Deception</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Discriminate between synchronized drone audio spoofing and genuine hostile armor maneuvers under full communications blackout in high-density urban terrain without friendly CAS.
+            </p>
+<!-- Parameters Table -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded space-y-1 font-label-sm text-label-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">SIGNAL AVAILABILITY</span>
+<span class="text-error font-semibold">18% SEVERELY DEGRADED</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">DECOY DENSITY</span>
+<span class="text-tertiary font-semibold">HIGH MULTI-SPECTRAL</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TRANSMISSION DELAY</span>
+<span class="text-on-surface font-semibold">+120s ASYNCHRONOUS</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-semibold">AVG FAILURE RATE: 64%</span>
+<a class="px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded font-semibold transition-colors shadow-sm" data-path="operational-simulator" href="#">
+              START SCENARIO →
+            </a>
+</div>
+</div>
+<!-- Scenario 3: Disconnected Horizon -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">EXERCISE 03 // DISCONNECTED HORIZON</span>
+<span class="px-space-xs py-0.5 bg-surface-container rounded font-label-sm text-label-sm text-on-surface-variant">SUBTERRANEAN / C2</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Subterranean Autonomous Consensus</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Fully autonomous distributed node command with zero external telemetry, relying exclusively on local micro-consensus, cached cryptographic orders, and dead-reckoning telemetry.
+            </p>
+<!-- Parameters Table -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded space-y-1 font-label-sm text-label-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">SIGNAL AVAILABILITY</span>
+<span class="text-on-surface font-semibold">0% AIR-GAPPED</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">DECOY DENSITY</span>
+<span class="text-on-surface font-semibold">MULTI-VECTOR LATERAL</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TRANSMISSION DELAY</span>
+<span class="text-on-surface font-semibold">STOCHASTIC TIMECODE</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DURATION: 90 MIN</span>
+<a class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider rounded font-semibold transition-colors" data-path="operational-simulator" href="#">
+              LOAD PROFILE
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Three Core Operational Capabilities -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">CAPABILITY SPECIFICATION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Engineered for Harsh Realities</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Capability 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-on-primary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">network_check</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">01 / DETERMINISTIC NETWORK DEGRADATION</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Physics-Accurate RF Modeling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Emulate stochastic packet dropping, high-jitter buffer bloat, and selective multi-band jamming with physical line-of-sight math rather than randomized abstractions.
+          </p>
+<div class="mt-space-xs pt-space-xs text-on-surface font-label-sm text-label-sm">
+<span class="text-primary font-bold">›</span> Jitter variance ±1400ms
+          </div>
+</div>
+<!-- Capability 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">psychology_alt</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">02 / COGNITIVE UNCERTAINTY &amp; DECOY LOGIC</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Stress-Testing Commander Bias</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Test how officers react when presented with contradictory telemetry: outdated UAV video feeds versus immediate seismic signatures. Quantify hesitation index and confirmation bias.
+          </p>
+<div class="mt-space-xs pt-space-xs text-on-surface font-label-sm text-label-sm">
+<span class="text-secondary font-bold">›</span> Synthetic acoustic injection
+          </div>
+</div>
+<!-- Capability 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded shadow-sm flex flex-col gap-space-sm">
+<div class="w-10 h-10 rounded bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">sync_saved_locally</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">03 / GROUND-TRUTH AFTER-ACTION REVIEW</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Perception vs. Ground Truth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Synchronized timeline scrub reveals exactly what the commander thought was happening at 14:00Z compared directly with absolute physical reality across contested terrain.
+          </p>
+<div class="mt-space-xs pt-space-xs text-on-surface font-label-sm text-label-sm">
+<span class="text-tertiary font-bold">›</span> Split-screen perceptual divergence
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Architecture & Air-Gap Compliance -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">COMPLIANCE &amp; ARCHITECTURE</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">Zero-Exfiltration Engine</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">STANDARDIZED SANDBOX ARCHITECTURE v4.2</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Tile 1 -->
+<div class="p-space-md bg-surface-container-low rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-bold">01 // WASM CORE</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+</div>
+<h4 class="font-headline-md text-title-sm text-on-surface font-bold">100% In-Browser Execution</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Entire simulation runs locally in client WebAssembly. No telemetry leaves the operational workstation or test cell.
+          </p>
+</div>
+<!-- Tile 2 -->
+<div class="p-space-md bg-surface-container-low rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold">02 // P2P MESHING</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">cell_tower</span>
+</div>
+<h4 class="font-headline-md text-title-sm text-on-surface font-bold">Decentralized WebRTC</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Connect multi-station command staff over local offline LAN WebRTC channels without any centralized relay servers.
+          </p>
+</div>
+<!-- Tile 3 -->
+<div class="p-space-md bg-surface-container-low rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-bold">03 // METRIC SCORING</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">calculate</span>
+</div>
+<h4 class="font-headline-md text-title-sm text-on-surface font-bold">Mathematical Survivability</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Standardized algorithmic scoring calculating hesitation indices, collateral error deltas, and resource expenditure efficiency.
+          </p>
+</div>
+<!-- Tile 4 -->
+<div class="p-space-md bg-surface-container-low rounded shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">04 // CRYPTO SEEDS</span>
+<span class="material-symbols-outlined text-on-surface text-[18px]">key</span>
+</div>
+<h4 class="font-headline-md text-title-sm text-on-surface font-bold">Deterministic Replays</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cryptographically signed pseudorandom seeds ensure identical, peer-verifiable exercise playback for formal evaluation boards.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Deployment Action Callout -->
+<section class="w-full px-gutter-lg py-space-xl bg-surface-container-high">
+<div class="max-w-5xl mx-auto bg-surface-container-lowest p-space-xl rounded shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          READY FOR TACTICAL DEPLOYMENT
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+          Initialize Your Command Evaluation
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Deploy instant tactical simulation exercises on any air-gapped machine. Evaluate staff reaction under contested electromagnetic spectrum conditions with zero setup time.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm w-full lg:w-auto">
+<a class="w-full sm:w-auto px-space-xl py-space-md bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider rounded transition-all shadow-md text-center" data-path="operational-simulator" href="#">
+          Launch Operational Simulator
+        </a>
+<a class="w-full sm:w-auto px-space-lg py-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase tracking-wider rounded transition-colors text-center font-semibold" href="#">
+          Protocol Briefing (PDF)
+        </a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-lg"><div class="w-full px-gutter-lg flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded bg-primary"></div><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider">© 2025 SIGNAL LOST — Tactical Decision Simulator • System Online</span></div><div class="flex items-center gap-space-lg"><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary uppercase tracking-wider transition-colors" data-path="overview" href="#">Overview</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary uppercase tracking-wider transition-colors" data-path="scenarios" href="#">Scenarios</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary uppercase tracking-wider transition-colors" data-path="tactical-doctrine" href="#">Documentation</a><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline uppercase tracking-wider transition-colors" data-path="operational-simulator" href="#">Launch Simulator</a></div></div></footer>
+
+<script src="../../navigation.js"></script></body></html>

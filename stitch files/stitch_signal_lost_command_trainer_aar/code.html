@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Space+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"inverse-on-surface":"#eef0ff","tertiary-container":"#b15f00","tertiary-fixed-dim":"#ffb77d","on-error":"#ffffff","secondary-fixed-dim":"#4cd7f6","on-primary-fixed":"#00201d","primary-fixed":"#89f5e7","outline-variant":"#bcc9c6","on-secondary":"#ffffff","on-secondary-container":"#006172","secondary-fixed":"#acedff","surface-container-low":"#f2f3ff","background":"#faf8ff","error-container":"#ffdad6","tertiary-fixed":"#ffdcc3","surface":"#faf8ff","on-secondary-fixed":"#001f26","on-surface-variant":"#3d4947","on-error-container":"#93000a","primary-fixed-dim":"#6bd8cb","surface-variant":"#dae2fd","inverse-surface":"#283044","primary":"#00685f","surface-container-high":"#e2e7ff","surface-container":"#eaedff","inverse-primary":"#6bd8cb","secondary":"#00687a","on-tertiary-fixed-variant":"#6e3900","on-secondary-fixed-variant":"#004e5c","outline":"#6d7a77","primary-container":"#008378","on-tertiary-container":"#fffbff","secondary-container":"#57dffe","surface-bright":"#faf8ff","on-background":"#131b2e","on-tertiary-fixed":"#2f1500","tertiary":"#8d4b00","on-primary":"#ffffff","error":"#ba1a1a","surface-dim":"#d2d9f4","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-surface":"#131b2e","on-primary-fixed-variant":"#005049","on-primary-container":"#f4fffc","surface-container-highest":"#dae2fd","surface-tint":"#006a61"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-md":"1rem","margin":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","gutter":"1rem","gutter-sm":"0.5rem","space-lg":"1.5rem","margin-mobile":"1rem","gutter-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"2rem"},"fontFamily":{"body-lg":["Geist"],"label-sm":["JetBrains Mono"],"body-sm":["Geist"],"headline-md":["Space Grotesk"],"label-lg":["JetBrains Mono"],"headline-lg-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"body-md":["Geist"],"headline-xl-mobile":["Space Grotesk"],"headline-xl":["Space Grotesk"],"label-md":["JetBrains Mono"],"title-sm":["Space Grotesk"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.04em","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.06em","fontWeight":"500"}],"title-sm":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface">SIGNAL LOST</span><span class="font-label-sm text-label-sm text-primary uppercase px-space-xs py-0.5 rounded bg-surface-container-high">v2.4-AAR</span></div><div class="hidden xl:flex items-center gap-space-sm font-label-md text-label-md"><span class="text-on-surface-variant font-medium tracking-wider">OP DUSTFALL // EX-8429-DDIL</span><span class="text-outline-variant">/</span><span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider">ROLE: AAR DEBRIEF & GROUND TRUTH</span><span class="flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>COMPLETE</span></div></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container rounded-lg font-bold"><a aria-current="page" class="px-space-sm py-1.5 uppercase transition-colors bg-primary-container text-on-primary-container rounded-lg font-bold" data-path="overview" href="#">Overview</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md uppercase transition-colors" data-path="timeline-and-discrepancies" href="#">Timeline & Discrepancies</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md uppercase transition-colors" data-path="decision-audit" href="#">Decision Audit</a><a class="px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md uppercase transition-colors" data-path="comparative-metrics" href="#">Comparative Metrics</a></nav><div class="flex items-center gap-space-sm"><a class="hidden sm:inline-flex items-center justify-center px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md uppercase transition-colors" data-path="run-again" href="#">Run Again</a><a class="hidden sm:inline-flex items-center justify-center px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-md text-label-md uppercase transition-colors" data-path="home" href="#">Back to Home</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Interactive & Filter Controller Scripts -->
+<script>
+    function switchFilter(category) {
+      const rows = document.querySelectorAll('.audit-row');
+      const tabs = document.querySelectorAll('.filter-tab');
+      
+      tabs.forEach(tab => {
+        if(tab.dataset.filter === category) {
+          tab.classList.add('bg-primary', 'text-on-primary');
+          tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        } else {
+          tab.classList.remove('bg-primary', 'text-on-primary');
+          tab.classList.add('bg-surface-container', 'text-on-surface-variant');
+        }
+      });
+
+      rows.forEach(row => {
+        if (category === 'all' || row.dataset.category === category) {
+          row.classList.remove('hidden');
+        } else {
+          row.classList.add('hidden');
+        }
+      });
+    }
+
+    function toggleDetail(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.toggle('hidden');
+      }
+    }
+  </script>
+<!-- TOP CONTEXT TRACKER / SYSTEM STRIP -->
+<div class="w-full bg-surface-container-low px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">STATE: SYNTHESIS LOCKED</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">NODE: DDIL-ANALYTICS-WEST</span>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide">CHECKSUM OK: SHA256-49EF81</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant">LOGS: 1,428 EVENTS</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-bold">ACCURACY INDEX: 89.4%</span>
+</div>
+</div>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="w-full px-margin-desktop py-space-lg flex flex-col gap-space-xl max-w-[1600px] mx-auto">
+<!-- 1. EXECUTIVE SUMMARY BANNER -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg relative overflow-hidden">
+<!-- Subtle top telemetry accent -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary"></div>
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase font-bold">
+              POST-EXERCISE RECONSTRUCTION
+            </span>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">
+              PROTOCOL: DDIL-STANAG-5066
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed px-space-xs py-0.5 rounded uppercase font-semibold">
+              SYNTHETIC DEGRADATION ACTIVE
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight mt-1">
+            SCENARIO DEBRIEF: OP DUSTFALL
+            <span class="text-secondary font-normal block sm:inline text-title-sm sm:text-headline-md tracking-normal sm:ml-2">
+              (SECTOR-4 RELAY ISOLATION)
+            </span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Simulation completed with <span class="font-semibold text-on-surface">5/5 decision gates logged</span>. This After-Action Review evaluates command judgment latency, operational hesitation, and uncertainty management under intermittent connectivity and <span class="font-semibold text-tertiary">42% synthetic packet degradation</span>.
+          </p>
+</div>
+<!-- Meta Identifiers Panel -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs min-w-[260px] self-start">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase">Simulation Run</span>
+<span class="font-bold text-on-surface">#EX-8429-DDIL</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase">Total Duration</span>
+<span class="font-bold text-on-surface">18m 42s ZULU</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase">Deterministic Seed</span>
+<span class="font-bold text-primary font-label-md">#7F8C92B</span>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm pt-space-xs mt-space-xs border-t border-surface-container-high">
+<span class="text-on-surface-variant uppercase">Cognitive Coherence</span>
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-bold">NOMINAL-HIGH</span>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-sm">
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Total Decisions</span>
+<span class="material-symbols-outlined text-[18px] text-primary">rule_folder</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 5 gates</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-semibold">100% Protocol Compliance</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Final Link Health</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">signal_cellular_alt_2_bar</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-tertiary">38%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">RF floor</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded mt-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded" style="width: 38%"></div>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Peak Packet Delay</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">timer</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface">+1,420<span class="text-title-sm">ms</span></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Observed at T+11:45</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Ground Discrepancies</span>
+<span class="material-symbols-outlined text-[18px] text-error">visibility_off</span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Identified / Resolved</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-semibold">Zero critical misallocations</span>
+</div>
+</div>
+</section>
+<!-- 2. TIMELINE OF DEGRADATION & COMM EVENTS -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container-high">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase font-bold">
+<span class="material-symbols-outlined text-[16px]">timeline</span>
+            DEGRADATION CHRONOLOGY
+          </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Timeline of Disruption & Decision Gates</h2>
+</div>
+<!-- Legend Indicator -->
+<div class="flex items-center gap-space-md flex-wrap font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface-variant">Nominal Link (80-100%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface-variant">Degraded / Inject (30-79%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-on-surface-variant">Severed / Blackout (<30%)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-surface-container-highest"></span>
+<span class="text-on-surface-variant">Command Gate</span>
+</div>
+</div>
+</div>
+<!-- Step Timeline Visualizer -->
+<div class="w-full overflow-x-auto pb-space-sm">
+<div class="min-w-[980px] flex flex-col gap-space-md relative py-4">
+<!-- Continuous Track Base -->
+<div class="absolute top-12 left-6 right-6 h-1.5 bg-surface-container rounded-full z-0"></div>
+<!-- Color segment fills on track -->
+<div class="absolute top-12 left-6 w-[28%] h-1.5 bg-primary rounded-l-full z-0"></div>
+<div class="absolute top-12 left-[28%] w-[42%] h-1.5 bg-tertiary z-0"></div>
+<div class="absolute top-12 left-[70%] right-6 h-1.5 bg-error rounded-r-full z-0"></div>
+<!-- Milestones Grid -->
+<div class="grid grid-cols-5 gap-space-md relative z-10">
+<!-- Node 1 -->
+<div class="flex flex-col gap-space-xs group">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">01</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T+02:00</span>
+</div>
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm mt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Nominal 98%</span>
+<span class="material-symbols-outlined text-[16px] text-primary">sensors</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">Recon-1 Visual Verified</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Telemetry confirms solar inverter relay down. Visual sightline clear.</p>
+<div class="mt-2 pt-1.5 border-t border-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Gate 01 Executed</span>
+<span class="text-primary font-bold">Latency 28s</span>
+</div>
+</div>
+</div>
+<!-- Node 2 -->
+<div class="flex flex-col gap-space-xs group">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">02</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T+06:30</span>
+</div>
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm mt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold">Inject #1: +45% Loss</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">route</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">Supply Convoy Detour</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">West gate route packet delayed. Packet drop spikes to 45%. Team rerouted.</p>
+<div class="mt-2 pt-1.5 border-t border-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Gate 02 Executed</span>
+<span class="text-on-surface font-bold">Latency 39s</span>
+</div>
+</div>
+</div>
+<!-- Node 3 -->
+<div class="flex flex-col gap-space-xs group">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">03</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T+11:15</span>
+</div>
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm mt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary-container uppercase font-bold">Inject #2: Anomaly</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">vibration</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">Synthetic S-03 Alert</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automated vibration spike flagged. Contradicted prior scout telemetry.</p>
+<div class="mt-2 pt-1.5 border-t border-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Gate 03 Executed</span>
+<span class="text-primary font-bold">Latency 44s</span>
+</div>
+</div>
+</div>
+<!-- Node 4 -->
+<div class="flex flex-col gap-space-xs group">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">04</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T+14:30</span>
+</div>
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm mt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error uppercase font-bold">Link Blackout</span>
+<span class="material-symbols-outlined text-[16px] text-error">wifi_off</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">Squad Bravo Silence</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No heartbeat for 6 minutes. Checksum invalid on packet #4088.</p>
+<div class="mt-2 pt-1.5 border-t border-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Gate 04 Executed</span>
+<span class="text-error font-bold">Latency 65s</span>
+</div>
+</div>
+</div>
+<!-- Node 5 -->
+<div class="flex flex-col gap-space-xs group">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm">05</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">T+18:00</span>
+</div>
+<div class="bg-surface-container-low hover:bg-surface-container transition-colors rounded-lg p-space-sm mt-3 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold">Freeze State</span>
+<span class="material-symbols-outlined text-[16px] text-primary">lock_clock</span>
+</div>
+<div class="font-title-sm text-title-sm text-on-surface font-semibold mt-1">Mission Concluded</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Power restored. Telemetry logs crystallized. Scenario baseline logged.</p>
+<div class="mt-2 pt-1.5 border-t border-surface-container flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Gate 05 Executed</span>
+<span class="text-primary font-bold">Latency 36s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. GROUND TRUTH VS. COMMANDO PERCEPTION (Side-by-Side Matrix) -->
+<section class="w-full flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">COGNITIVE FOG OF WAR AUDIT</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Ground Truth vs. Commando Perception</h2>
+</div>
+<div class="px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          POST-DEBRIEF SYNTHESIS COMPLETE
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Left: Operator Known State -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">OPERATOR PERCEIVED STATE</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">
+              LOCAL TELEMETRY CONSOLE
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold tracking-wide">RECON-1 / RELAY TOWER</span>
+<span class="text-primary font-medium">T+02:15 REPORT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Mast visually intact; sub-unit breaker unresponsive; relay power output zero.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">CONFIDENCE: 92%</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Direct optical sighting</span>
+</div>
+</div>
+<!-- Item 2 (The Discrepancy) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary font-bold tracking-wide">SECTOR S-03 SENSOR SPIKE</span>
+<span class="text-tertiary-container font-semibold">T+11:15 ALERT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">High-frequency seismic vibration flagged near West perimeter; unverified telemetry suggested perimeter breach.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">AUTOMATED SENSOR ALERT</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="text-tertiary font-label-sm text-label-sm">Raw signal uncorroborated</span>
+</div>
+</div>
+<!-- Item 3 (Bravo) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-bold tracking-wide">SQUAD BRAVO STATUS</span>
+<span class="text-error font-medium">T+14:30 SILENCE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Silent for 6+ consecutive minutes; final data burst corrupted with checksum mismatch. Tactical status assumed in-extremis.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">LOST CONTACT</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Packet fail count: 14</span>
+</div>
+</div>
+<!-- Item 4 (Supply) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold tracking-wide">LOGISTICS RESUPPLY UNIT</span>
+<span class="text-on-surface-variant font-medium">T+07:10 NOTICE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Delayed by 7+ minutes via West route detour; no voice follow-up; estimated arrival time uncertain.</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">DELAY REPORT</span>
+<span class="text-outline-variant font-label-sm text-label-sm">•</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Telemetry stale (>8m old)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Ground Truth Synthesized Reality -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-headline-md text-headline-md text-on-surface tracking-tight">ACTUAL GROUND TRUTH</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-fixed bg-primary-fixed px-space-xs py-0.5 rounded font-bold">
+              VERIFIED SIM ENGINE
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Truth 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-bold tracking-wide">CONFIRMED: RELAY INTEGRITY</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold">ACCURATE REPORT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Relay tower was completely structurally sound. Failure was purely isolated to a thermal fuse override on auxiliary sub-panel.</p>
+<div class="text-primary font-label-sm text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                Commando perception matched physical reality.
+              </div>
+</div>
+<!-- Truth 2 (Artifact) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary-container font-bold tracking-wide">SYNTHETIC ARTIFACT DISCOVERY</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-semibold">TEST INJECT</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">False positive injected by Disruption Operator. No physical vibration existed; test evaluated automated data over-reliance.</p>
+<div class="text-tertiary font-label-sm text-label-sm mt-1 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                Commando successfully discounted sensor and trusted scout reconnaissance.
+              </div>
+</div>
+<!-- Truth 3 (Hardware Fail) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold tracking-wide">BATTERY LOSS (NO COMBAT EVENT)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">EQUIPMENT ISSUE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Comm terminal battery thermal cutoff at 14:28. Squad Bravo was fully static, defensive, and secure at Rally Point Echo.</p>
+<div class="text-on-surface-variant font-label-sm text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+                Zero hostile contact. Commando avoided panic redeployment.
+              </div>
+</div>
+<!-- Truth 4 (Supply Detour) -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-bold tracking-wide">SAFE TRANSIT DETOUR</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold">ROUTE NOMINAL</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Convoy safely bypassed natural gravel slide on West Gate pass. Cargo 100% intact, arriving at Depot at T+19:10.</p>
+<div class="text-primary font-label-sm text-label-sm mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                No security intervention required.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. COMPREHENSIVE DECISION AUDIT TABLE -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container-high">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">EVIDENCE-BASED GATE LOGS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Comprehensive Decision Audit</h2>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="filter-tab px-space-sm py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold transition-colors" data-filter="all" onclick="switchFilter('all')">
+            All (5)
+          </button>
+<button class="filter-tab px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase font-semibold transition-colors" data-filter="high-friction" onclick="switchFilter('high-friction')">
+            High Friction (2)
+          </button>
+<button class="filter-tab px-space-sm py-1 rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase font-semibold transition-colors" data-filter="optimal" onclick="switchFilter('optimal')">
+            Optimal (3)
+          </button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1000px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<th class="py-space-sm px-space-md font-semibold">Gate & Time</th>
+<th class="py-space-sm px-space-md font-semibold">Comms State / Telemetry</th>
+<th class="py-space-sm px-space-md font-semibold">Decision Selected</th>
+<th class="py-space-sm px-space-md font-semibold">Commando Rationale Logged</th>
+<th class="py-space-sm px-space-md font-semibold">Ground Truth Impact</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y divide-surface-container-high">
+<!-- Gate 01 -->
+<tr class="audit-row hover:bg-surface-container-low transition-colors" data-category="optimal">
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md font-bold text-on-surface">Gate 01</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold">T+03:15</div>
+<div class="mt-1 px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm inline-block">LATENCY: 28s</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[200px]">
+<div class="text-on-surface font-semibold">Recon Feed Active</div>
+<div class="text-on-surface-variant mt-0.5">Link quality 85%. Mast structurally sound; zero voltage on bus 2.</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[220px]">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  OPTION B: SEND TECH SQUAD
+                </span>
+<p class="text-on-surface-variant mt-1.5 text-body-sm">Authorize 2-person engineer detail to reset thermal breaker manually.</p>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[260px] italic text-on-surface">
+                “Visual confirmed physical mast intact. No hostile indications. Direct physical breaker restart is lowest overhead.”
+              </td>
+<td class="py-space-md px-space-md align-top max-w-[240px]">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Optimal Resolution
+                </div>
+<p class="text-on-surface-variant mt-1">Breaker reset executed without resistance. Power restored early.</p>
+</td>
+</tr>
+<!-- Gate 02 -->
+<tr class="audit-row hover:bg-surface-container-low transition-colors" data-category="optimal">
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md font-bold text-on-surface">Gate 02</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold">T+08:40</div>
+<div class="mt-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm inline-block">LATENCY: 39s</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[200px]">
+<div class="text-on-surface font-semibold">Delayed Transport Notice</div>
+<div class="text-tertiary mt-0.5 font-medium">+45% Packet degradation. Stale notice indicated 7m detour delay.</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[220px]">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  OPTION A: HOLD PERIMETER DISPOSITION
+                </span>
+<p class="text-on-surface-variant mt-1.5 text-body-sm">Maintain current defensive posture; avoid sending search element into fog.</p>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[260px] italic text-on-surface">
+                “Detour was anticipated due to rainfall. Diverting quick reaction team would leave northern gate unguarded.”
+              </td>
+<td class="py-space-md px-space-md align-top max-w-[240px]">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                  Disciplined Restraint
+                </div>
+<p class="text-on-surface-variant mt-1">Supply arrived unassisted. Prevented unnecessary squad fragmentation.</p>
+</td>
+</tr>
+<!-- Gate 03 -->
+<tr class="audit-row hover:bg-surface-container-low transition-colors" data-category="optimal">
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md font-bold text-on-surface">Gate 03</div>
+<div class="font-label-sm text-label-sm text-tertiary-container font-semibold">T+12:20</div>
+<div class="mt-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm inline-block">LATENCY: 44s</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[200px]">
+<div class="text-tertiary font-semibold">Telemetry Contradiction</div>
+<div class="text-on-surface-variant mt-0.5">Automated vibration spike vs. Scout visual scan of serene sector.</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[220px]">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  OPTION C: CROSS-VERIFY WITH SCOUT
+                </span>
+<p class="text-on-surface-variant mt-1.5 text-body-sm">Instruct Recon-1 to focus optics on Sector 3 before taking kinetic action.</p>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[260px] italic text-on-surface">
+                “Automated sensor threshold looks noisy. Optical scout confirms nothing in line of sight. Holding fire.”
+              </td>
+<td class="py-space-md px-space-md align-top max-w-[240px]">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">shield</span>
+                  Avoided Artifact Trap
+                </div>
+<p class="text-on-surface-variant mt-1">Successfully bypassed operator disruption inject. Avoided false lockdown.</p>
+</td>
+</tr>
+<!-- Gate 04 -->
+<tr class="audit-row hover:bg-surface-container-low transition-colors" data-category="high-friction">
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md font-bold text-on-surface">Gate 04</div>
+<div class="font-label-sm text-label-sm text-error font-semibold">T+15:10</div>
+<div class="mt-1 px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm inline-block font-bold">LATENCY: 65s (PEAK)</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[200px]">
+<div class="text-error font-semibold">Squad Bravo Blackout</div>
+<div class="text-on-surface-variant mt-0.5">6 min silence. Corrupted packet fragment received at 14:29.</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[220px]">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  OPTION B: DISPATCH RUNNER DRONE
+                </span>
+<p class="text-on-surface-variant mt-1.5 text-body-sm">Launch tethered micro-UAV to re-establish optical relay at Rally Echo.</p>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[260px] italic text-on-surface">
+                “High ambiguity. They could be ambushed or just out of power. Sending drone to assess without endangering personnel.”
+              </td>
+<td class="py-space-md px-space-md align-top max-w-[240px]">
+<div class="flex items-center gap-1.5 text-tertiary font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+                  Hesitation Noted (+65s)
+                </div>
+<p class="text-on-surface-variant mt-1">Safe outcome, but prolonged deliberation created vulnerability window.</p>
+</td>
+</tr>
+<!-- Gate 05 -->
+<tr class="audit-row hover:bg-surface-container-low transition-colors" data-category="high-friction">
+<td class="py-space-md px-space-md align-top">
+<div class="font-label-md text-label-md font-bold text-on-surface">Gate 05</div>
+<div class="font-label-sm text-label-sm text-primary font-semibold">T+17:35</div>
+<div class="mt-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm inline-block">LATENCY: 36s</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[200px]">
+<div class="text-on-surface font-semibold">Final Consolidation</div>
+<div class="text-on-surface-variant mt-0.5">Relay online. Comms degraded at 38%. Link synchronization pending.</div>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[220px]">
+<span class="inline-flex items-center gap-1 px-2 py-1 rounded bg-surface-container font-label-sm text-label-sm font-bold text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  OPTION A: SYNCHRONIZE & CONSOLIDATE
+                </span>
+<p class="text-on-surface-variant mt-1.5 text-body-sm">Freeze network logs and establish persistent narrow-band mesh.</p>
+</td>
+<td class="py-space-md px-space-md align-top max-w-[260px] italic text-on-surface">
+                “Power stable, relay active. Secure baseline channels and lock logs before opening broad-spectrum broadcasts.”
+              </td>
+<td class="py-space-md px-space-md align-top max-w-[240px]">
+<div class="flex items-center gap-1.5 text-primary font-label-sm text-label-sm font-bold uppercase">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+                  Protocol Closed
+                </div>
+<p class="text-on-surface-variant mt-1">Simulation finished in solid state. Full telemetry archived.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 5. KEY PERFORMANCE & UNCERTAINTY METRICS -->
+<section class="w-full flex flex-col gap-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">QUANTITATIVE COGNITIVE METRICS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Uncertainty Management Indicators</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Decision Latency</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">pace</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">42.4<span class="text-title-sm">s</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">mean</span>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">
+              Target Baseline: 38.0s
+            </div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Skew vs Nominal</span>
+<span class="text-tertiary font-bold">+11.5%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-tertiary h-full rounded" style="width: 72%"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Delivery Rate</span>
+<span class="material-symbols-outlined text-[18px] text-primary">mark_email_read</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary">68.2%</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mt-1">
+              31.8% Delayed / Dropped
+            </div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Throughput Floor</span>
+<span class="text-primary font-bold">14.2 kbps</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-primary h-full rounded" style="width: 68.2%"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Stale Data Exposure</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface">history_toggle_off</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">14m 20s</span>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">
+              Cumulative >5m old data
+            </div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Mission Share</span>
+<span class="text-on-surface font-bold">76.3%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-outline h-full rounded" style="width: 76.3%"></div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Missed Packets</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">running_with_errors</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-tertiary">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">critical items</span>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">
+              Unreceived at gate trigger
+            </div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Impact Coefficient</span>
+<span class="text-tertiary font-bold">Low</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-tertiary h-full rounded" style="width: 30%"></div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Contradiction Reliance</span>
+<span class="material-symbols-outlined text-[18px] text-primary">psychology_alt</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">decisions</span>
+</div>
+<div class="text-label-sm font-label-sm text-primary font-bold mt-1">
+              Zero bias trap triggers
+            </div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cognitive Score</span>
+<span class="text-primary font-bold">100 / 100</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded overflow-hidden">
+<div class="bg-primary h-full rounded" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. BASELINE (NOMINAL) VS. DEGRADED RUN COMPARISON -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container-high">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">A/B BENCHMARK ANALYSIS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Baseline (Nominal) vs. Degraded (DDIL) Run</h2>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+          COMPARED AGAINST GOLDEN BENCHMARK #REF-9002
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-center">
+<!-- Run A Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">RUN A (CURRENT)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">DDIL STRESS</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-md text-body-md">
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Execution Duration</span>
+<span class="font-bold text-on-surface">18m 42s</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Mean Decision Latency</span>
+<span class="font-bold text-tertiary">42.4s</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Packet Delivery Ratio</span>
+<span class="font-bold text-tertiary">68.2%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Cognitive Friction Gates</span>
+<span class="font-bold text-on-surface">2 Gates (G3, G4)</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-on-surface-variant">Data Discrepancy Injects</span>
+<span class="font-bold text-on-surface">2 Active Injects</span>
+</div>
+</div>
+</div>
+<!-- Delta / Comparison Visualizer -->
+<div class="flex flex-col items-center justify-center gap-space-md py-4 px-2 bg-surface-container rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-bold tracking-wider">OBSERVED OPERATIONAL DELTAS</span>
+<div class="w-full flex flex-col gap-space-sm px-4">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Mission Duration Skew</span>
+<span class="font-bold text-tertiary">+51.2% (+6m 32s)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 65%"></div>
+<div class="bg-tertiary h-full" style="width: 35%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Decision Latency Overhead</span>
+<span class="font-bold text-error">+101.9% (+21.4s/gate)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 49%"></div>
+<div class="bg-error h-full" style="width: 51%"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Comm Packet Loss Skew</span>
+<span class="font-bold text-tertiary">+31.2% Lost</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 68%"></div>
+<div class="bg-tertiary h-full" style="width: 32%"></div>
+</div>
+</div>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant text-center max-w-xs">
+            Reflects heightened operational deliberation in uncorroborated environments.
+          </div>
+</div>
+<!-- Run B Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">RUN B (NOMINAL)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">BENCHMARK</span>
+</div>
+<div class="flex flex-col gap-space-xs text-body-md text-body-md">
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Execution Duration</span>
+<span class="font-bold text-on-surface">12m 10s</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Mean Decision Latency</span>
+<span class="font-bold text-primary">21.0s</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Packet Delivery Ratio</span>
+<span class="font-bold text-primary">99.4%</span>
+</div>
+<div class="flex justify-between py-1 border-b border-surface-container-high">
+<span class="text-on-surface-variant">Cognitive Friction Gates</span>
+<span class="font-bold text-on-surface">0 Gates</span>
+</div>
+<div class="flex justify-between py-1">
+<span class="text-on-surface-variant">Data Discrepancy Injects</span>
+<span class="font-bold text-on-surface">0 (Uncompromised)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. UNCERTAINTY-MANAGEMENT ANALYSIS (Evidence-Based Observations) -->
+<section class="w-full grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Observed Strengths -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-space-sm border-b border-surface-container-high">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Observed Strengths</h2>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0 mt-0.5">
+              1
+            </div>
+<div class="flex flex-col">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Prioritized Human Ground Recon over Raw Alerts</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                At Gate 03, commando maintained discipline when confronted with a high-priority synthetic seismic alert. Rather than executing an immediate reactionary alert or weapons-free lockdown, the operator verified with optical scout eyes on ground.
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold shrink-0 mt-0.5">
+              2
+            </div>
+<div class="flex flex-col">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Stale Timestamp Recognition</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Correctly identified that logistics transport warning packets were delayed by 8+ minutes. Prevented reactionary redeployment of gate defenses to an already-passed waypoint situation.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Friction Points & Opportunities -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-space-sm border-b border-surface-container-high">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Identified Friction & Opportunities</h2>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5">
+              !
+            </div>
+<div class="flex flex-col">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Extended Silence Deliberation (+65s Latency)</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Squad Bravo’s radio blackout caused significant decision freeze at Gate 04. While the final decision to launch a reconnaissance drone was sound, latency jumped to 65 seconds (+71% above mean).
+              </p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5">
+              →
+            </div>
+<div class="flex flex-col">
+<div class="font-title-sm text-title-sm text-on-surface font-semibold">Recommended Practice: Fallback Check-In Windows</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Establish scheduled passive radio windows prior to commencing missions in DDIL zones. When a silent squad misses an expected interval, commanders should default to pre-authorized fallback contingencies without delay.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. ACTIONS & COMMAND FOOTER -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col gap-0.5 text-center sm:text-left">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider">
+          SIGNAL LOST v3.4 • SIH DEFENSE SIMULATION FRAMEWORK
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+          Deterministic Debrief Report Generated for Academic Demonstration & Training Records
+        </span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap justify-center">
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md uppercase font-semibold transition-colors flex items-center gap-2" data-path="run-again" href="#">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+          Run Scenario Again
+        </a>
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md uppercase font-semibold transition-colors flex items-center gap-2" data-path="export-summary" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export AAR (PDF / JSON)
+        </a>
+<a class="px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md uppercase font-bold transition-colors flex items-center gap-2 shadow-sm" data-path="home" href="#">
+<span class="material-symbols-outlined text-[18px]">home</span>
+          Back to Hub
+        </a>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-surface-container-low py-space-md shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="w-full px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant"><div class="flex items-center gap-space-sm flex-wrap"><span class="uppercase tracking-wider font-semibold text-on-surface">DDIL DECISION SIMULATOR</span><span>•</span><span>Academic Research Demonstration</span><span>•</span><span>SEED: <span class="font-label-sm text-on-surface tracking-widest font-semibold">#7F8C92B</span></span></div><div class="flex items-center gap-space-sm"><span class="text-outline">ZULU TIME SYNC VALIDATED</span><a class="px-space-sm py-1 rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest hover:text-on-surface uppercase tracking-wider font-medium transition-colors" data-path="export-summary" href="#">Export Summary (JSON/PDF)</a></div></div></footer><script src="../../navigation.js"></script></body></html>

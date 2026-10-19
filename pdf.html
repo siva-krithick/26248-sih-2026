@@ -1,0 +1,396 @@
+<!-- Chosen Palette: Tactical Slate, Modern Teal, Warm Sand, and Amber Accent -->
+<!-- Application Structure Plan:
+  Designed as an executive proposal and technical solution guide for SIH Problem Statement 26248.
+  Structure:
+    1. Problem Overview & Core Tactical Issue (The DDIL C2 Vacuum)
+    2. Comparison of Existing Methods vs. Proposed Solution
+    3. Core Mathematical Concepts (High-Level, Intuitive Explanations)
+    4. Technical Architecture & Data Flow
+    5. Actionable SIH Hackathon Implementation Roadmap (4 Phases)
+    6. Why This Solution Is Better (Expanded Differentiators & Defense Impact)
+  Key Features:
+    - Interactive architecture diagram and comparison toggle
+    - Chart.js visualization comparing traditional vs. proposed decision delay
+    - Print and PDF export ready layout
+-->
+<!-- Visualization & Content Choices:
+  - Metric Comparison -> Goal: Show why traditional C2 simulators fail -> Interactive Comparison Table & Chart.js graph.
+  - Math Intuition -> Goal: Explain Gilbert-Elliott & Subjective Logic simply -> Card-based conceptual breakdowns with zero heavy equations.
+  - Implementation Plan -> Goal: Roadmap for SIH -> Clean phased timeline layout.
+  - Section 6 Differentiators -> Goal: Clearly highlight key competitive edges -> Icon-bulleted card grid.
+-->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIH PS 26248 - Multi-Domain Decision Trainer Solution Blueprint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+            },
+            tactical: {
+              50: '#f8fafc',
+              800: '#1e293b',
+              900: '#0f172a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      body { background-color: #ffffff !important; color: #000000 !important; }
+      .card-shadow { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      height: 280px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
+
+  <!-- Sticky Top Navigation -->
+  <nav class="no-print sticky top-0 z-50 bg-tactical-900 text-white px-6 py-3 shadow-md flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <span class="bg-teal-500 text-tactical-900 font-bold text-xs px-2 py-1 rounded uppercase">SIH PS 26248</span>
+      <h1 class="text-sm md:text-base font-semibold text-slate-100">Multi-Domain Decision Trainer — Team Solution Blueprint</h1>
+    </div>
+    <button onclick="window.print()" class="bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold px-4 py-2 rounded transition flex items-center gap-2">
+      <span>🖨️</span> Save as PDF / Print
+    </button>
+  </nav>
+
+  <div class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+
+    <!-- HEADER BLOCK -->
+    <header class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <div class="flex flex-wrap justify-between items-center border-b border-slate-200 pb-4 mb-4 gap-2">
+        <div>
+          <span class="text-xs font-mono font-bold text-teal-700 uppercase tracking-widest">Smart India Hackathon Proposal</span>
+          <h1 class="text-2xl md:text-3xl font-extrabold text-slate-900">Tactical Command Trainer for DDIL Environments</h1>
+        </div>
+        <div class="text-right font-mono text-xs text-slate-500">
+          <div>Problem Statement ID: 26248</div>
+          <div>Domain: Defence & Cyber Security</div>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 leading-relaxed">
+        This blueprint outlines a realistic, low-bandwidth, interactive training platform designed to train commanders to operate during <strong>Denied, Degraded, Intermittent, and Limited (DDIL)</strong> communications. It bridges physical electronic warfare realities with cognitive decision science.
+      </p>
+    </header>
+
+    <!-- SECTION 1: THE CORE ISSUE -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2 flex items-center gap-2">
+        <span class="text-teal-600">01.</span> The Core Issue: Information Starvation & Deception
+      </h2>
+      <p class="text-sm text-slate-700 leading-relaxed mb-4">
+        Modern command platforms assume a continuous, high-speed internet/SATCOM link. However, during peer-conflict, adversaries execute Electronic Warfare (EW) jamming, GPS spoofing, and cyber attacks. This creates three critical failures in command operations:
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-4 text-xs">
+        <div class="bg-red-50 border border-red-200 p-4 rounded-lg">
+          <div class="font-bold text-red-900 text-sm mb-1">1. Stale Tactical Maps</div>
+          <p class="text-red-700">Positions freeze or update in bulk every 10–15 minutes. Commanders make decisions based on outdated target coordinates.</p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg">
+          <div class="font-bold text-amber-900 text-sm mb-1">2. Partial Telemetry</div>
+          <p class="text-amber-700">Packet dropouts strip out key metadata like Friend-or-Foe (IFF) tags or fuel status, leading to misinterpretation.</p>
+        </div>
+        <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg">
+          <div class="font-bold text-purple-900 text-sm mb-1">3. Cyber Ghost Tracks</div>
+          <p class="text-purple-700">Injected fake C2 messages create false threat tracks, forcing commanders to waste strikes on non-existent targets.</p>
+        </div>
+      </div>
+      
+      <div class="mt-4 bg-slate-50 border-l-4 border-teal-600 p-3 text-xs text-slate-700">
+        <strong>The Problem with Current Training:</strong> Military commanders are accustomed to pristine digital displays during peacetime exercises. When faced with degraded displays, they experience <i>Analysis Paralysis</i> or make reckless assumptions.
+      </div>
+    </section>
+
+    <!-- SECTION 2: EXISTING METHODS VS OUR SOLUTION -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2 flex items-center gap-2">
+        <span class="text-teal-600">02.</span> Existing Approaches vs. Proposed Solution
+      </h2>
+
+      <div class="overflow-x-auto mb-6">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 border-b border-slate-300">
+              <th class="p-3 font-bold">Feature / Capability</th>
+              <th class="p-3 font-bold text-red-700">Traditional C2 Simulators</th>
+              <th class="p-3 font-bold text-teal-800 bg-teal-50">Our SIH Proposed Platform</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr>
+              <td class="p-3 font-semibold">Network Modeling</td>
+              <td class="p-3">Binary (100% Online or 100% Disconnected)</td>
+              <td class="p-3 bg-teal-50/50 font-medium">Dynamic Fading & Packet Burst Loss (Gilbert-Elliott Model)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Uncertainty Display</td>
+              <td class="p-3">Shows crisp icons with absolute certainty</td>
+              <td class="p-3 bg-teal-50/50 font-medium">Subjective Logic (Belief / Disbelief / Uncertainty circles)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Cognitive Assessment</td>
+              <td class="p-3">Evaluates only outcome (Did target get destroyed?)</td>
+              <td class="p-3 bg-teal-50/50 font-medium">Separates network latency from decision delay (SAGAT Probes)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold">Bandwidth Efficiency</td>
+              <td class="p-3">Heavy video/graphic streams (Fails on 2G/Radio)</td>
+              <td class="p-3 bg-teal-50/50 font-medium">Compressed-DIS / Lightweight JSON telemetry state parser</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chart comparing decision performance -->
+      <div class="bg-slate-50 p-4 border border-slate-200 rounded-lg">
+        <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide text-center mb-2">Trainee Decision Delay vs Network Degradation</h3>
+        <div class="chart-container">
+          <canvas id="chartComparison"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MATH simplified -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2 flex items-center gap-2">
+        <span class="text-teal-600">03.</span> Light Touch: Key Science & Concepts
+      </h2>
+      <p class="text-sm text-slate-700 mb-4">
+        We use two simple mathematical concepts to power the simulation without overloading system resources:
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 text-xs">
+        <div class="border border-slate-200 p-4 rounded-lg bg-slate-50 space-y-2">
+          <div class="font-bold text-sm text-teal-800">1. Gilbert-Elliott Network Model</div>
+          <p class="text-slate-600">
+            Instead of predicting every radio wave, the channel flips between two dynamic states:
+          </p>
+          <ul class="list-disc list-inside text-slate-700 space-y-1 font-mono">
+            <li><strong>State G (Good):</strong> 99% packets pass smoothly.</li>
+            <li><strong>State B (Bad):</strong> 95% packets dropped due to jamming.</li>
+          </ul>
+          <p class="text-slate-600">
+            <em>Why it matters:</em> It creates realistic "bursts" of network loss rather than simple random drops.
+          </p>
+        </div>
+
+        <div class="border border-slate-200 p-4 rounded-lg bg-slate-50 space-y-2">
+          <div class="font-bold text-sm text-teal-800">2. Subjective Logic (3-Part Trust Metric)</div>
+          <p class="text-slate-600">
+            Instead of giving a simple probability (e.g., "80% chance enemy"), every target track is split into:
+          </p>
+          <div class="bg-white p-2 border border-slate-200 rounded font-mono text-center">
+            Opinion = [ Belief + Disbelief + Uncertainty = 1.0 ]
+          </div>
+          <p class="text-slate-600">
+            <em>Why it matters:</em> If satellite feeds drop, "Uncertainty" rises, signaling to the commander that data is missing, not that the target disappeared.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TECHNICAL ARCHITECTURE -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2 flex items-center gap-2">
+        <span class="text-teal-600">04.</span> System Architecture & Stack
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs mb-6">
+        <div class="p-3 bg-slate-900 text-slate-100 rounded">
+          <span class="text-teal-400 font-bold block mb-1">Frontend Display</span>
+          Tailwind CSS, HTML5 Canvas, Chart.js for real-time tactical map render & dashboards.
+        </div>
+        <div class="p-3 bg-slate-900 text-slate-100 rounded">
+          <span class="text-teal-400 font-bold block mb-1">Degradation Engine</span>
+          Node.js / Python proxy layer applying Gilbert-Elliott packet delays & dropped frames.
+        </div>
+        <div class="p-3 bg-slate-900 text-slate-100 rounded">
+          <span class="text-teal-400 font-bold block mb-1">Protocol Layer</span>
+          C2SIM / JSON message formatting for standardized command orders & position reports.
+        </div>
+        <div class="p-3 bg-slate-900 text-slate-100 rounded">
+          <span class="text-teal-400 font-bold block mb-1">Analytics / AAR</span>
+          xAPI format event logger tracking decision timestamps vs. ground truth.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ACTIONABLE IMPLEMENTATION PLAN FOR SIH -->
+    <section class="bg-white border border-slate-200 rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-slate-900 mb-3 border-b border-slate-200 pb-2 flex items-center gap-2">
+        <span class="text-teal-600">05.</span> SIH Hackathon Implementation Roadmap
+      </h2>
+      <p class="text-sm text-slate-700 mb-4">
+        A realistic execution timeline designed for hackathon milestones and prototype delivery:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+        <div class="border-t-4 border-teal-600 bg-slate-50 p-4 rounded shadow-sm">
+          <span class="font-bold text-slate-400 uppercase">Phase 1</span>
+          <h3 class="font-bold text-slate-900 text-sm my-1">Core C2 Map & Proxy</h3>
+          <p class="text-slate-600 mb-2">Build lightweight web tactical display with grid units and basic order buttons.</p>
+          <span class="bg-teal-100 text-teal-800 text-[10px] px-2 py-0.5 rounded font-semibold">Deliverable: Working Tactical Map</span>
+        </div>
+
+        <div class="border-t-4 border-teal-600 bg-slate-50 p-4 rounded shadow-sm">
+          <span class="font-bold text-slate-400 uppercase">Phase 2</span>
+          <h3 class="font-bold text-slate-900 text-sm my-1">Degradation Engine</h3>
+          <p class="text-slate-600 mb-2">Integrate Gilbert-Elliott slider controls to introduce live lag, drops, and ghost tracks.</p>
+          <span class="bg-teal-100 text-teal-800 text-[10px] px-2 py-0.5 rounded font-semibold">Deliverable: Live EW Simulator</span>
+        </div>
+
+        <div class="border-t-4 border-teal-600 bg-slate-50 p-4 rounded shadow-sm">
+          <span class="font-bold text-slate-400 uppercase">Phase 3</span>
+          <h3 class="font-bold text-slate-900 text-sm my-1">SAGAT Freeze Probes</h3>
+          <p class="text-slate-600 mb-2">Implement unexpected pause probes asking trainees to recall lost status or predict tracks.</p>
+          <span class="bg-teal-100 text-teal-800 text-[10px] px-2 py-0.5 rounded font-semibold">Deliverable: Cognitive Tester</span>
+        </div>
+
+        <div class="border-t-4 border-teal-600 bg-slate-50 p-4 rounded shadow-sm">
+          <span class="font-bold text-slate-400 uppercase">Phase 4</span>
+          <h3 class="font-bold text-slate-900 text-sm my-1">AAR Dashboard</h3>
+          <p class="text-slate-600 mb-2">Automated After-Action Review breaking down network lag vs cognitive hesitation.</p>
+          <span class="bg-teal-100 text-teal-800 text-[10px] px-2 py-0.5 rounded font-semibold">Deliverable: Final SIH Demo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WHY THIS SOLUTION IS BETTER -->
+    <section class="bg-teal-900 text-white rounded-xl p-6 md:p-8 shadow-sm">
+      <h2 class="text-lg font-bold text-teal-300 mb-4 border-b border-teal-800 pb-2">
+        06. Why This Solution Is Better
+      </h2>
+      <ul class="grid md:grid-cols-2 gap-4 text-xs">
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Solves Real Defence Need:</strong>
+            Trains commanders to make effective tactical decisions when screens fail, rather than suffering analysis paralysis.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Ultra Lightweight & Portable:</strong>
+            Runs directly in a standard browser over low-bandwidth tactical radios or 2G field networks with zero heavy video dependencies.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Unbiased Cognitive Analytics:</strong>
+            Mathematically separates physical network latency ($\Delta T_{network}$) from human decision hesitation ($\Delta T_{cognitive}$).
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Open Defense Standards Compliant:</strong>
+            Uses standard C2SIM and Compressed-DIS data schemas for seamless integration into existing military C4ISR networks.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Realistic Stochastic EW Modeling:</strong>
+            Replaces simplistic binary toggles with Gilbert-Elliott Markov chains that model authentic burst loss and channel fading.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Quantifiable Uncertainty Metrics:</strong>
+            Uses Subjective Logic (Belief / Disbelief / Uncertainty) to explicitly visualize data ignorance rather than hiding it behind misleading binary icons.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Active Cyber Deception Resilience:</strong>
+            Simulates synthetic ghost tracks and altered C2 metadata, actively building critical verification instincts against adversary spoofing.
+          </div>
+        </div>
+        <div class="flex gap-3 items-start bg-teal-950/40 p-3 rounded border border-teal-800/50">
+          <span class="text-teal-400 text-base font-bold">✓</span>
+          <div>
+            <strong class="text-teal-200 block mb-0.5">Objective SA Measurement:</strong>
+            Features automated SAGAT freeze probes to measure situational awareness across perception, comprehension, and projection tiers.
+          </div>
+        </div>
+      </ul>
+    </section>
+
+    <footer class="text-center text-xs text-slate-500 pt-4 border-t border-slate-200">
+      SIH Problem Statement 26248 Solution Blueprint • Prepared for Hackathon Development Team
+    </footer>
+
+  </div>
+
+  <script>
+    // Comparison Chart
+    const ctx = document.getElementById('chartComparison').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['0% Jamming', '25% Jamming', '50% Jamming', '75% Jamming', '100% Blackout'],
+        datasets: [
+          {
+            label: 'Untrained Trainee Reaction Time (s)',
+            data: [15, 45, 120, 240, 480],
+            borderColor: '#ef4444',
+            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+            fill: true,
+            tension: 0.3
+          },
+          {
+            label: 'Our Platform Trained Reaction Time (s)',
+            data: [12, 18, 30, 55, 90],
+            borderColor: '#0f766e',
+            backgroundColor: 'rgba(15, 118, 110, 0.1)',
+            fill: true,
+            tension: 0.3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 10 } } }
+        },
+        scales: {
+          y: {
+            title: { display: true, text: 'Decision Hesitation (Seconds)', font: { size: 10 } }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
