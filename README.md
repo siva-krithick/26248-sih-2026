@@ -1,4 +1,4 @@
-# SIGNAL LOST
+# SIGNAL-LOST
 
 Browser-based Tactical Command Trainer for DDIL environments. The current foundation connects the five Google Stitch screen exports while preserving their original HTML, inline styles, and design assets.
 
